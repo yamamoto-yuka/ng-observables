@@ -1,6 +1,6 @@
 # Observables
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+Observable in Angular is a feature that provides support for delivering messages between different parts of your single-page application.　This feature is used in notification and cart system etc.
 
 ## Development server
 
