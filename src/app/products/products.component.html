@@ -4,9 +4,11 @@
   <h3>{{ product.title }}</h3>
   <p>{{ product.price | currency: "CAD" }}</p>
   <div class="mt-3">
-    <button>-</button> 
-    <input type="number" class="qri" value="0" />
-    <button>+</button>
+    <button (click)="decQty(product.id)">-</button> 
+    <!-- <input type="number" class="qri" [value]="product.qty" /> -->
+    <div class="qtyinput">{{product.qty}}</div>
+    <button (click)="intQty(product.id)">+</button>
   </div>
-  <button class="btn btn-warning mt-3">Add to Cart</button>
+  <button class="btn btn-warning mt-3" (click)="addToCart(product.id, product.title, product.price, product.qty)">Add to Cart</button>
+  | <button class="btn btn-danger mt-3" (click)="removeFromCart(product.id)">X</button>
 </div>
